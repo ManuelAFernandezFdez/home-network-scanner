@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping develop Home Network Scanner. The project is currently in the specification stage, so implementation details and development commands may be established as the first code is added.
+Thank you for helping develop Home Network Scanner.
 
 ## Before Making a Change
 
@@ -11,7 +11,7 @@ Thank you for helping develop Home Network Scanner. The project is currently in 
 ## Development Expectations
 
 - Target Python 3.10 or newer.
-- Use the project's configured formatter, linter, type checker, and test commands once they are added. Document these commands here when the project adopts them; do not introduce competing tools without a clear need.
+- Run the test suite with `python -m pytest`. Tests should not require a live network, Nmap privileges, or access to personal devices.
 - Keep scan execution, result normalization, classification, and report generation independently testable.
 - Prefer fixture-based tests for Nmap XML and generated reports. Unit tests should not require a live network, Nmap privileges, or access to personal devices.
 - Do not run network scans during development unless you have explicit authorization for the selected network and devices. Never test against public or third-party targets.
@@ -24,4 +24,4 @@ Add only maintained dependencies that are needed for the feature. Explain new de
 
 ## Before Submitting
 
-When project tooling is available, run the documented test, lint, formatting, and type-check commands relevant to your change. In the change description, summarize behavior changes, note any security-relevant effects, and list checks run or any checks that could not be run.
+Run the documented tests relevant to your change. In the change description, summarize behavior changes, note any security-relevant effects, and list checks run or any checks that could not be run.
